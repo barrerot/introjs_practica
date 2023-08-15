@@ -34,7 +34,7 @@ const datos = [
   const desarrolladoresJavascript = datos.filter(desarrollador => desarrollador.habilidades.includes('JavaScript'));
   
   // Obtener los proyectos en los que trabajan los desarrolladores
-  const proyectosDesarrolladores = desarrolladoresJavascript.reduce((proyectos, desarrollador) => {
+  const proyectosDesarrolladores = datos.reduce((proyectos, desarrollador) => {
     proyectos.push(...desarrollador.proyectos.map(proyecto => proyecto.nombre));
     return proyectos;
   }, []);
